@@ -1,8 +1,8 @@
 # Supporting ReSequel
 
-If you read this, you probably want to help this project to stay healthy and alive. I am very happy about it. Thank you, and these are not empty words.
+If you read this, you probably want to help this project to stay healthy and alive. I am very happy about it. Thank you, and these are not buzz words.
 
-At the moment, I have no plans to monetize this software. However, your help is still needed. I need your emotional support, and a lot of other people - financial - to stay healthy and alive!
+At the moment, I have no plans to monetize this software. However, your help is still needed. I need your emotional support, and a lot of other people - financial support, to stay healthy and alive!
 
 I invite you to provide financial assistance to any non-profit foundation that helps children around the world fight their serious illnesses.
 
