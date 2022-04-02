@@ -24,4 +24,4 @@ Please create a pull requests to add new foundations to the list.
 |[AdVita (USA)](https://www.advitausa.org/)|[Donate](https://www.advitausa.org/how-to-help/donate-now-2/) or [Donate cryptocurrency](https://www.advitausa.org/how-to-help/bitcoins/)|
 |[AdVita (Germany)](https://www.advitaeu.com/)|[Donate](https://www.advitaeu.com/#rec76663591)|
 |[Kids2Kids (Ukraine)](https://kids2kids-fund.com/uk/)|[Donate](https://kids2kids-fund.com/uk/dityni-na-likuvannya/)|
-|[Ã–≤ﬁ ∆»“» (Ukraine)](https://www.mriyuzhiti.com/uk)|[Donate](https://www.mriyuzhiti.com/uk) (press the yellow button at the head)|
+|[–ú–†–Ü–Æ –ñ–ò–¢–ò (Ukraine)](https://www.mriyuzhiti.com/uk)|[Donate](https://www.mriyuzhiti.com/uk) (press the yellow button at the head)|
