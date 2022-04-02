@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFiles", "TestFiles\TestFiles.csproj", "{265417F7-64EC-404B-8FDA-0478818F321D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{68E18531-0A7A-46E6-A79C-124511E03A01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{0532F6D9-C495-46C9-ACB5-5377F02E3F35}"
+	ProjectSection(SolutionItems) = preProject
+		encoded_with_cipher.db = encoded_with_cipher.db
+		non_encoded.db = non_encoded.db
+		system.data.encoded.db = system.data.encoded.db
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{265417F7-64EC-404B-8FDA-0478818F321D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265417F7-64EC-404B-8FDA-0478818F321D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265417F7-64EC-404B-8FDA-0478818F321D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265417F7-64EC-404B-8FDA-0478818F321D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E18531-0A7A-46E6-A79C-124511E03A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E18531-0A7A-46E6-A79C-124511E03A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E18531-0A7A-46E6-A79C-124511E03A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E18531-0A7A-46E6-A79C-124511E03A01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {372A35AD-87C2-4B3F-BCB9-64A19A5DF0FE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Solutions>
+    <Solution>*DbProviderExample.sln</Solution>
+  </Solutions>
+  <SqlExecutors>
+    <SqlExecutor>
+      <Name>SQL Server Database</Name>
+      <Type>SqlServer</Type>
+      <ConnectionString>Data Source=.; Initial Catalog=master; Integrated Security=true; Connection Timeout=30;</ConnectionString>
+      <Parameters />
+      <IsForceChoosed>true</IsForceChoosed>
+      <Solutions>
+        <Solution>*DbProviderExample.sln</Solution>
+      </Solutions>
+    </SqlExecutor>
+    <SqlExecutor>
+      <Name>Postgresql</Name>
+      <Type>Postgresql</Type>
+      <ConnectionString>Server=localhost; Database=ReSequel; Port=5432; SSLMode=Prefer</ConnectionString>
+      <Parameters />
+      <IsForceChoosed>false</IsForceChoosed>
+      <Solutions>
+        <Solution>*DbProviderExample.sln</Solution>
+      </Solutions>
+    </SqlExecutor>
+    <SqlExecutor>
+      <Name>System.Data Encoded</Name>
+      <Type>SystemDataSQLite</Type>
+      <ConnectionString>Data Source=system.data.encoded.db;Version=3;</ConnectionString>
+      <Parameters>Password=mypassword;CaseSensitive=False</Parameters>
+      <IsForceChoosed>false</IsForceChoosed>
+      <Solutions>
+        <Solution>*DbProviderExample.sln</Solution>
+      </Solutions>
+    </SqlExecutor>
+    <SqlExecutor>
+      <Name>Non Encoded</Name>
+      <Type>MicrosoftDataSqlite</Type>
+      <ConnectionString>Data Source=non_encoded.db;</ConnectionString>
+      <Parameters>Password=;CaseSensitive=False</Parameters>
+      <IsForceChoosed>false</IsForceChoosed>
+      <Solutions>
+        <Solution>*DbProviderExample.sln</Solution>
+      </Solutions>
+    </SqlExecutor>
+    <SqlExecutor>
+      <Name>Encoded With Cipher</Name>
+      <Type>MicrosoftDataSqlite</Type>
+      <ConnectionString>Data Source=encoded_with_cipher.db;</ConnectionString>
+      <Parameters>Password=mypassword;CaseSensitive=False</Parameters>
+      <IsForceChoosed>false</IsForceChoosed>
+      <Solutions>
+        <Solution>*DbProviderExample.sln</Solution>
+      </Solutions>
+    </SqlExecutor>
+  </SqlExecutors>
+</Configuration>
