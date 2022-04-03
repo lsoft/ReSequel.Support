@@ -62,9 +62,11 @@ This mode is useful in everyday developping activities.
 
 ### How to start
 
-For demonstation purposes we will work with `DbProviderExample.sln` from ReSequel repository and a SQL Server instance.
+For demonstation purposes we will work with `DbProviderExample.sln` from this repository and a local SQL Server instance with address `.`.
 
-- At first, you need to open solution you will work with. Open `DbProviderExample.sln` from ReSequel repository.
+- At first, clone this repo to your computer.
+- Next, install ReSequel Visual Studio Extension from marketplace.
+- Next, you need to open solution you will work with. Open `DbProviderExample.sln`.
 - Invoke `ReSequel Solution Status` command and create a `ReSequel Configuration Generic File` and `ReSequel Setup Generic File` if they does not exists (for a `DbProviderExample.sln` these files exists, so this step may be skipped).
 - Invoke `Edit Settings` command and edit command line for SQL Server executor; save this file.
 - Open any `cs` file which contains SQL queries, for example `Unsorted.cs`; wait for a few seconds, you will see something like this:
@@ -111,9 +113,12 @@ Please take a look how solution-wide scanner tool window looks:
 
 ![Solution-wide SQL scanner](demo2.png)
 
-For a sqlite\postgres some controls will be unavailable due to absense of such SQL parsers in public domain.
+For a sqlite\postgres some controls will be unavailable due to absense of such SQL parsers in public domain or other technical reasons.
 
-TODO: what window's controls means
+If table/column/index/sql function names text box enabled, you can filter your list by pressing `Filter results` button.
+
+`Export queries` saves your queries in structured text file.
+
 
 ### Solution filters
 
@@ -261,7 +266,26 @@ Information which files exist can be obtained from `ReSequel Solution Status` co
 
 ## Configuration XML
 
-todo: write
+This file keeps your RDBMS configurations.
+
+- Solutions
+  - Solution: a list of wildcards for a solution file FULL path. If no these wildcards is matched with opened solution, ReSequel will disable. To have ReSequel enabled at least one match required.
+  - SolutionFilterName: a list of wildcards for a solution FILTER file NAME(not a full path!). Is any of these nodes exists, you need to match at least one Solutions/Solution node and at least 1 Solutions/SolutionFilterName node to have ReSequel enabled.
+- SqlExecutors: a list of RDBMS information that ReSequel will use to validate your queries.
+  - Name: just a name to show in the list.
+  - Type: RDBMS type (`SqlServer`, `SystemDataSqlite`, `MicrosoftDataSqlite`, `Postgresql`).
+  - ConnectionString: connection string.
+  - Parameters: additional parameters splitted by ';'.
+  - IsForceChoosed: marks a RDBMS user define to use. This node will change in case of pressing `Choose manually` button (see the image below).
+  - Solutions
+    - Solution: a list of wildcards for a solution file FULL path. If no RDBMS force-choosed and if any of these wildcards matched, this RDBMS will be used to validate your queries.
+    - SolutionFilterName: a list of wildcards for a solution FILTER file NAME(not a full path!). Is any of these nodes exists, you need to match at least one Solutions/Solution node and at least 1 Solutions/SolutionFilterName node to choose this RDBMS.
+
+You can see and choose selected executor into the following window:
+
+![Executor list](executor_list_window.png)
+
+Red color means that executor was selected manually. Blue - executor is a subject of choosing (matched for current solution). If no red executor exists, and a few of blue exists, the first will be choosed.
 
 Please, refer to `DbProviderExample.sln` and its `ReSequelConfiguration.xml` file to see the example.
 
@@ -270,20 +294,21 @@ Please, refer to `DbProviderExample.sln` and its `ReSequelConfiguration.xml` fil
 The `ReSequelSetup.xml` file contains information about ReSequel settings.
 
 - Reformat: section contains settings for formatting SQL queries.
-  - DoFormat: perform query formatting (arrangement of indents and line breaks).
   - PaddingStep: the number of spaces to indent. Tabulation is not supported. 
+  - DoFormat: perform query formatting (arrangement of indents and line breaks).
   - UpperCaseForKeywords: convert all SQL keywords to UPPER CASE.
-  - WrapIdentifiers: wrap identifiers in square brackets.
-  - AddDbo: append `dbo` to table names.
-  - SwitchToStrict: enable strict mode.
-- Scan: contains information about where to get SQL queries from your source code.
+  - SqlServer: SqlServer specific options.
+    - WrapIdentifiers: wrap identifiers in square brackets.
+    - AddDbo: append `dbo` to table names if cas of schema name absense.
+    - SwitchToStrict: enable strict mode (adding `from`, `into` etc. to the query).
+- Scan: contains information about where to get SQL queries from your source code. **It's the main place you need to change to.**
   - Project: the name of the project that contains the SQL queries. `.Net Framework` - for system classes.
   - Container: a class that contains SQL queries.
     - Property: C# property that contains SQL queries.
     - Method: C# method that contains SQL queries.
       - Argument: method arguments in order. `ContainsSql="true"` means that this argument contains a SQL query. `Type` is the BASE class of the method argument. `Type="System.Object"` means that ReSequel will accept any type for this argument.
   - Generator: SQL query generator.
-    - `Method Name="..." ContainsSql="true"` - a generator method that contains the main SQL.
-    - `Method Name="..." ContainsOptions="true"` - a generator method that contains an option to substitute in the underlying SQL.
+    - `Method Name="..." ContainsSql="true"` - a generator method that contains the SQL "skeleton".
+    - `Method Name="..." ContainsOptions="true"` - a generator method that contains option name at first parameter, followed by the options to substitute in the SQL "skeleton".
 
 Please, refer to `DbProviderExample.sln` and its `ReSequelSetup.xml` file to see the example.
