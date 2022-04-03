@@ -16,7 +16,7 @@ For run ReSequel in command line mode please build `ReSequel.csproj`. You will r
 
 - 1st argument: path to you `sln`/`slnf` file
 - 2nd argument: path to `ReSequelSetup.xml` file
-- 3rd argument: a RDBMS type (`SqlServer`, `Sqlite`, `Postgres`)
+- 3rd argument: a RDBMS type (`SqlServer`, `SystemDataSqlite`, `MicrosoftDataSqlite`, `Postgresql`)
 - 4th argument: connection parameters.
 - 5th argument: a connection string to your database.
 
