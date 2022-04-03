@@ -44,7 +44,7 @@ This mode is useful in automation scenarios.
 
 ## Visual Studio extension (Vsix) mode
 
-For a programmer a Vsix mode has been developed. You need to build `Extension.2019` or `Extension.2022` project and install vsix file into your instance of Visual Studio. As an alternative, a compiled distro can be downloaded here for a Visual Studio 2019 and here for a Visual Studio 2022.
+For a programmer a Vsix mode has been developed. You need to download compiled distro here for a Visual Studio 2019 and here for a Visual Studio 2022.
 
 After installing ReSequel extension into your Visual Studio, you find the following menu:
 
@@ -62,7 +62,7 @@ This mode is useful in everyday developping activities.
 
 ### How to start
 
-For demonstation purposes we will work with `DbProviderExample.sln` from this repository and a local SQL Server instance with address `.`.
+For demonstation purposes we will work with `DbProviderExample.sln` from this repository and a local SQL Server instance with instance name `.`.
 
 - At first, clone this repo to your computer.
 - Next, install ReSequel Visual Studio Extension from marketplace.
@@ -152,6 +152,8 @@ ReSequel support auto completion for SQL keywords and a table\view names:
 ![completion](completion0.png)
 
 ![completion](completion1.png)
+
+To show completion, put your cursor into string literal, and press `Ctrl+.`, or post a space symbol or a tab. ReSequel does not ensure that this string literal is a "container" for a SQL query. These checks are very costly and uses a Compilation symbols from Roslyn. So, not to be surprised, if ReSequel will offer you to post a table name into your MessageBox message :)
 
 Completion is in initial state of developing, so may work unstable.
 
