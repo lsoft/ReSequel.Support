@@ -71,7 +71,9 @@ where
     Ordinal_Position between 1 and 2
 ");
 
-            //empty (play with completion):
+
+            //ReSequel: MUTE next query at: *DbProviderExample.sln
+            //ReSequel: SKIP insert column validation
             await dbp.ExecuteQueryAsync(@"
 select * FROM
 ");

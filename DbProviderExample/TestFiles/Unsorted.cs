@@ -16,6 +16,14 @@ namespace TestFiles
 
             var dbp = new DBProvider();
 
+            //ReSequel: SKIP insert column validation
+            dbp.ExecuteNonQuery(@"
+INSERT INTO [dbo].[TestTable5]
+  ( [id], [column_date],[column_datetime])
+VALUES
+  (@x, getdate(), 1)
+");
+
             dbp.PrepareQuery("print 1", "print 2");
 
             dbp.SqlText = "select 10 a union all select 20 union all select null";
@@ -25,6 +33,7 @@ namespace TestFiles
             dbp.SqlText = a + b;
 
             //ReSequel: MUTE next query everywhere
+            //ReSequel: SKIP insert column validation
             dbp.ExecuteNonQuery(@"
 IF NOT EXISTS (
     SELECT id FROM MY_TABLE WITH (NOLOCK)

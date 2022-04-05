@@ -145,6 +145,14 @@ it's an experimental feature, so its button is yellow.
 
 Some RDBMS may have subset of the buttons disabled because of absense of public SQL parser or other technical reasons.
 
+### Hints
+
+Hints are special form single-line comments above your query. There are 3 hints now:
+
+- `Mute everywhere` will mute your query in any solution.
+- `Mute at (here)` will mute your query in any solution which full file path is matched written wildcards.
+- `Skip insert column validation` disables this validation process step. It is useful in situations when you are inserting with `identity insert on`.
+
 ### Auto completion
 
 ReSequel support auto completion for SQL keywords and a table\view names:
