@@ -44,7 +44,7 @@ This mode is useful in automation scenarios.
 
 ## Visual Studio extension (Vsix) mode
 
-For a programmer a Vsix mode has been developed. You need to download compiled distro here for a Visual Studio 2019 and here for a Visual Studio 2022.
+For a programmer a Vsix mode has been developed. You need to download compiled distro [here](https://marketplace.visualstudio.com/items?itemName=lsoft.ReSequel2019) for a Visual Studio 2019 and [here](https://marketplace.visualstudio.com/items?itemName=lsoft.ReSequel64) for a Visual Studio 2022.
 
 After installing ReSequel extension into your Visual Studio, you find the following menu:
 
