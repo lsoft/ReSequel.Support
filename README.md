@@ -48,7 +48,7 @@ For a programmer a Vsix mode has been developed. You need to download compiled d
 
 After installing ReSequel extension into your Visual Studio, you find the following menu:
 
-![ReSequel menu](menu0.png)
+![ReSequel menu](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/menu0.png)
 
 - `ReSequel Solution Status` allows you to control ReSequel status for current solution. ReSequel stores its `xml` files in context of solution, so you need to open solution to make ReSequel fully functional.
 - `Edit Settings` allows you to edit `ReSequelSetup.xml`.
@@ -71,7 +71,7 @@ For demonstation purposes we will work with `DbProviderExample.sln` from this re
 - Invoke `Edit Settings` command and edit command line for SQL Server executor; save this file.
 - Open any `cs` file which contains SQL queries, for example `Unsorted.cs`; wait for a few seconds, you will see something like this:
 
-![In source](demo1.png)
+![In source](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/demo1.png)
 
 The things you see are
 
@@ -87,7 +87,7 @@ Behaviour of ReSequel can be modified in various aspects.
 
 Here are the options for SQL queries background colors and opacity, border colors, completion status and a switch for a strict mode:
 
-![Settings 1](options1.png)
+![Settings 1](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/options1.png)
 
 - `Timeout for adornments` is a timeout in seconds you need to wait unitl adornments shows up after you stopped typing.
 - `Use graphem for drop-down buttons` replaces text via the short Unicode graphems to save your screen space.
@@ -98,7 +98,7 @@ Here are the options for SQL queries background colors and opacity, border color
 
 Here are the options for foreground SQL colorization, switch to on/off it and ability to use TSQL colorizer for any SQL dialect:
 
-![Settings 2](options2.png)
+![Settings 2](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/options2.png)
 
 - `Enabled` enables a colorization of SQL **tokens** (yes, inside your C# string literals). Switching foreground colorization off makes VS UI smoother.
 - `Use TSQL Colorizer` means that ReSequel will use TSQL token colorizer for a non-SQL databases (sqlite, postgres). It may not be 100% correct, but in the other case colorization for sqlite/postgres will be disabled (due to absense of such SQL parsers in public domain).
@@ -111,7 +111,7 @@ ReSequel Visual Studio Extension is able to scan your solution for a SQL queries
 
 Please take a look how solution-wide scanner tool window looks:
 
-![Solution-wide SQL scanner](demo2.png)
+![Solution-wide SQL scanner](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/demo2.png)
 
 For a sqlite\postgres some controls will be unavailable due to absense of such SQL parsers in public domain or other technical reasons.
 
@@ -124,12 +124,12 @@ If table/column/index/sql function names text box enabled, you can filter your l
 
 If you had performed Solution-wide scanning, you are able to use solution filters now to easily find C# files with failed (RED) or muted SQL queries. These filters adopts information from solution-wide scanner, so you need to run it first.
 
-![Solution filter](demo5.png)
+![Solution filter](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/demo5.png)
 
 
 ### Context menu
 
-![In source](demo1.png)
+![In source](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/demo1.png)
 
 - `Ctrl+C Default` copies current SQL into clipboard. If SQL database supports parsing queries, the required parameters will be added to the script.
 - `Ctrl+C Current` does the same, but for current selected SQL query in case of generator. Generators are explained below.
@@ -139,7 +139,7 @@ If you had performed Solution-wide scanning, you are able to use solution filter
 - `Build param class` build an anonymous C# class that contains a parameters for the SQL query. This class is indended to use with `linq2db`.
 - `Format query` opens an formatting window:
 
-![formatting](demo6.png)
+![formatting](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/demo6.png)
 
 it's an experimental feature, so its button is yellow.
 
@@ -157,9 +157,9 @@ Hints are special form single-line comments above your query. There are 3 hints 
 
 ReSequel support auto completion for SQL keywords and a table\view names:
 
-![completion](completion0.png)
+![completion](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/completion0.png)
 
-![completion](completion1.png)
+![completion](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/completion1.png)
 
 To show completion, put your cursor into string literal, and press `Ctrl+.`, or post a space symbol or a tab. ReSequel does not ensure that this string literal is a "container" for a SQL query. These checks are very costly and uses a Compilation symbols from Roslyn. So, not to be surprised, if ReSequel will offer you to post a table name into your MessageBox message :)
 
@@ -293,7 +293,7 @@ This file keeps your RDBMS configurations.
 
 You can see and choose selected executor into the following window:
 
-![Executor list](executor_list_window.png)
+![Executor list](https://raw.githubusercontent.com/lsoft/ReSequel.Support/main/executor_list_window.png)
 
 Red color means that executor was selected manually. Blue - executor is a subject of choosing (matched for current solution). If no red executor exists, and a few of blue exists, the first will be choosed.
 
