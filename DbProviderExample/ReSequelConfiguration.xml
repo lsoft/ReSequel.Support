@@ -29,7 +29,7 @@
     </SqlExecutor>
     <SqlExecutor>
       <Name>System.Data Encoded</Name>
-      <Type>SystemDataSQLite</Type>
+      <Type>SystemDataSqlite</Type>
       <ConnectionString>Data Source=system.data.encoded.db;Version=3;</ConnectionString>
       <Parameters>Password=mypassword;CaseSensitive=False</Parameters>
       <IsForceChoosed>false</IsForceChoosed>
