@@ -11,6 +11,10 @@
       <ConnectionString>Data Source=.; Initial Catalog=master; Integrated Security=true; Connection Timeout=30;</ConnectionString>
       <Parameters />
       <IsForceChoosed>true</IsForceChoosed>
+      <Transformation>
+        <Regex>ili</Regex>
+        <ReplaceValue>ele</ReplaceValue>
+      </Transformation>
       <Solutions>
         <Solution>*DbProviderExample.sln</Solution>
        <!-- <SolutionFilterName>MySolutioniFilterFileName.slnf</SolutionFilterName> -->
@@ -22,6 +26,10 @@
       <ConnectionString>Server=localhost; Database=ReSequel; Port=5432; SSLMode=Prefer</ConnectionString>
       <Parameters />
       <IsForceChoosed>false</IsForceChoosed>
+      <Transformation>
+        <Regex></Regex>
+        <ReplaceValue></ReplaceValue>
+      </Transformation>
       <Solutions>
         <Solution>*DbProviderExample.sln</Solution>
         <!-- <SolutionFilterName>MySolutioniFilterFileName.slnf</SolutionFilterName> -->
@@ -33,6 +41,10 @@
       <ConnectionString>Data Source=system.data.encoded.db;Version=3;</ConnectionString>
       <Parameters>Password=mypassword;CaseSensitive=False</Parameters>
       <IsForceChoosed>false</IsForceChoosed>
+      <Transformation>
+        <Regex></Regex>
+        <ReplaceValue></ReplaceValue>
+      </Transformation>
       <Solutions>
         <Solution>*DbProviderExample.sln</Solution>
         <!-- <SolutionFilterName>MySolutioniFilterFileName.slnf</SolutionFilterName> -->
@@ -44,6 +56,10 @@
       <ConnectionString>Data Source=non_encoded.db;</ConnectionString>
       <Parameters>Password=;CaseSensitive=False</Parameters>
       <IsForceChoosed>false</IsForceChoosed>
+      <Transformation>
+        <Regex></Regex>
+        <ReplaceValue></ReplaceValue>
+      </Transformation>
       <Solutions>
         <Solution>*DbProviderExample.sln</Solution>
         <!-- <SolutionFilterName>MySolutioniFilterFileName.slnf</SolutionFilterName> -->
@@ -55,6 +71,10 @@
       <ConnectionString>Data Source=encoded_with_cipher.db;</ConnectionString>
       <Parameters>Password=mypassword;CaseSensitive=False</Parameters>
       <IsForceChoosed>false</IsForceChoosed>
+      <Transformation>
+        <Regex></Regex>
+        <ReplaceValue></ReplaceValue>
+      </Transformation>
       <Solutions>
         <Solution>*DbProviderExample.sln</Solution>
         <!-- <SolutionFilterName>MySolutioniFilterFileName.slnf</SolutionFilterName> -->

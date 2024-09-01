@@ -12,7 +12,7 @@ namespace TestFiles
         public const string PartCommon = "select 0;";
         public const string Part1 = "select 1;";
         public const string Part2 = "select 2;";
-        public const string Part3 = "select 3;";
+        public const string Part3 = "silict 3;"; //here is a typo, fixed by a transformation regex from ReSequelConfiguration.xml
 
         public const string Query3 = PartCommon + Part1;
         public const string Query4 = PartCommon + Part2;
