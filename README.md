@@ -6,7 +6,7 @@ ReSequel is a tool for validate SQL queries in your code against your database s
 
 In any mode ReSequel DOES NOT run your program, and DOES NOT run your SQL queries to actual execution, but ReSequel uses RDBMS engine to do various tasks like syntax validation, etc. ReSequel is powered by Roslyn and uses it to extract SQL queries from your code. Places which contains SQL qieries are defined in a ReSequel XML setup file that can be differenet for different `sln`/`slnf`.
 
-ReSequel supports Microsoft SQL Server 2012 (and later), SQLite 3 and Postgres (beta).
+ReSequel supports Microsoft SQL Server 2012 (and later), SQLite 3, Postgres and Clickhouse (beta).
 
 # Modes
 
@@ -16,7 +16,7 @@ For run ReSequel in command line mode please build `ReSequel.csproj`. You will r
 
 - 1st argument: path to you `sln`/`slnf` file
 - 2nd argument: path to `ReSequelSetup.xml` file
-- 3rd argument: a RDBMS type (`SqlServer`, `SystemDataSqlite`, `MicrosoftDataSqlite`, `Postgresql`)
+- 3rd argument: a RDBMS type (`SqlServer`, `SystemDataSqlite`, `MicrosoftDataSqlite`, `Postgresql`, `Clickhouse`)
 - 4th argument: connection parameters.
 - 5th argument: a connection string to your database.
 
@@ -40,7 +40,7 @@ Postgresql
 C:\projects\github\ReSequel\DbProviderExample\DbProviderExample.sln C:\projects\github\ReSequel\DbProviderExample\ReSequelSetup.xml Postgresql "Server=localhost; Database=ReSequel; Port=5432; SSLMode=Prefer" "" True
 ```
 
-This mode is useful in automation scenarios.
+This mode is useful in automation scenarios. This working mode is not provided for free.
 
 ## Visual Studio extension (Vsix) mode
 
@@ -83,7 +83,7 @@ As you started to write your code, all ReSequel adornments disappears to make yo
 
 ### Visual Studio ReSequel options
 
-Behaviour of ReSequel can be modified in various aspects.
+Behavior of ReSequel can be modified in various aspects.
 
 Here are the options for SQL queries background colors and opacity, border colors, completion status and a switch for a strict mode:
 
@@ -283,7 +283,7 @@ This file keeps your RDBMS configurations.
   - SolutionFilterName: a list of wildcards for a solution FILTER file NAME(not a full path!). Is any of these nodes exists, you need to match at least one Solutions/Solution node and at least 1 Solutions/SolutionFilterName node to have ReSequel enabled.
 - SqlExecutors: a list of RDBMS information that ReSequel will use to validate your queries.
   - Name: just a name to show in the list.
-  - Type: RDBMS type (`SqlServer`, `SystemDataSqlite`, `MicrosoftDataSqlite`, `Postgresql`).
+  - Type: RDBMS type (`SqlServer`, `SystemDataSqlite`, `MicrosoftDataSqlite`, `Postgresql`, `Clickhouse`).
   - ConnectionString: connection string.
   - Parameters: additional parameters splitted by ';'.
   - IsForceChoosed: marks a RDBMS user define to use. This node will change in case of pressing `Choose manually` button (see the image below).

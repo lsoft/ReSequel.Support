@@ -80,5 +80,19 @@
         <!-- <SolutionFilterName>MySolutioniFilterFileName.slnf</SolutionFilterName> -->
       </Solutions>
     </SqlExecutor>
+    <SqlExecutor>
+      <Name>Clickhouse</Name>
+      <Type>Clickhouse</Type>
+      <ConnectionString>UseSession=True;Host=127.0.0.1;Password=mypwd;Timeout=604800;UseServerTimezone=False</ConnectionString>
+      <Parameters />
+      <IsForceChoosed>false</IsForceChoosed>
+      <Transformation>
+        <Regex />
+        <ReplaceValue />
+      </Transformation>
+      <Solutions>
+        <Solution>*DbProviderExample.sln</Solution>
+      </Solutions>
+    </SqlExecutor>
   </SqlExecutors>
 </Configuration>

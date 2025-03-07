@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Async.cs" />
+    <Compile Include="Clickhouse.cs" />
     <Compile Include="GenericMethod.cs" />
     <Compile Include="Generator2.cs" />
     <Compile Include="Program.cs" />
