@@ -38,6 +38,13 @@ ORDER BY table;
             dbp.ExecuteNonQuery(@"
 select non_existent_column from information_schema.tables
 ");
+
+            dbp.ExecuteExtension(
+                1,
+                //ReSequel: USE validator with TYPE: SqlServer
+                "select distinct 1 from sys.securable_classes",
+                2);
+
         }
     }
 }
