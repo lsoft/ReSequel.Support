@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Common\Common.csproj" Id="68e18531-0a7a-46e6-a79c-124511e03a01" />
+  <Project Path="TestFiles\TestFiles.csproj" Id="265417f7-64ec-404b-8fda-0478818f321d" />
+</Solution>
