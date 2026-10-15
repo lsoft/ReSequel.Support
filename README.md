@@ -6,7 +6,7 @@ ReSequel is a tool for validate SQL queries in your code against your database s
 
 In any mode ReSequel DOES NOT run your program, and DOES NOT run your SQL queries to actual execution, but ReSequel uses RDBMS engine to do various tasks like syntax validation, etc. ReSequel is powered by Roslyn and uses it to extract SQL queries from your code. Places which contains SQL qieries are defined in a ReSequel XML setup file that can be differenet for different `sln`/`slnf`.
 
-ReSequel supports Microsoft SQL Server 2012 (and later), SQLite 3, Postgres and Clickhouse (beta).
+ReSequel supports Microsoft SQL Server 2012 SP4 (and later), SQLite 3, Postgres and Clickhouse (beta).
 
 # Modes
 
